@@ -36,4 +36,4 @@ repos:
     hooks:
     -   id: mypy
 EOF
-pre-commit update
+pre-commit autoupdate

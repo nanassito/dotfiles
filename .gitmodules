@@ -1,3 +1,6 @@
 [submodule "sharedvault"]
 	path = sharedvault
 	url = https://github.com/nanassito/sharedvault.git
+[submodule "tpl8tr"]
+	path = tpl8tr
+	url = https://github.com/nanassito/tpl8tr

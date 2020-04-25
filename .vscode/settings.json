@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "/home/vsonline/.local/share/virtualenvs/sharedvault-00mivEdd/bin/python",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "git.autofetch": true,
+    "python.venvPath": "/home/vsonline/.local/share/virtualenvs/"
+}
