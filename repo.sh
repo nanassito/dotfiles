@@ -1,8 +1,5 @@
 set -eux
 
-which pip3.8 || echo "Could not find pip3.8 in $PATH"
-which pip3.8 || return 1
-
 
 # Extending the default .gitignore
 for PATTERN in '.vscode' 'Pipefile.lock'; 
@@ -12,12 +9,10 @@ done
 
 
 # Make sure we have have pipenv and set up the venv.
-pip3.8 install --user pipenv
 pipenv update --dev || pipenv install --dev --pre pytest black mypy flake8
 
 
 # Setup pre-commit
-pip3.8 install --user pre-commit
 pre-commit install
 ls .pre-commit-config.yaml || cat > .pre-commit-config.yaml << EOF
 repos:

@@ -1,0 +1,3 @@
+[submodule "sharedvault"]
+	path = sharedvault
+	url = https://github.com/nanassito/sharedvault.git
