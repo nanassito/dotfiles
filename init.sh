@@ -1,3 +1,5 @@
+set -eux
+
 which pip3.8 || echo "Could not find pip3.8 in $PATH"
 which pip3.8 || return 1
 
