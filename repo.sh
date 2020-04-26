@@ -52,7 +52,4 @@ ignore_missing_imports = True
 
 [mypy-unittests]
 ignore_errors = True
-
-[tool:pytest]
-addopts = --cov=. --cov-report=term-missing --no-cov-on-fail
 EOF
