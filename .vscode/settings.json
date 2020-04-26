@@ -1,9 +1,16 @@
 {
-    "python.pythonPath": "/home/vsonline/.local/share/virtualenvs/sharedvault-00mivEdd/bin/python",
+    "python.pythonPath": "/home/vsonline/.local/share/virtualenvs/tpl8tr-e9D0tewO/bin/python",
     "editor.rulers": [
         80,
         120
     ],
     "git.autofetch": true,
-    "python.venvPath": "/home/vsonline/.local/share/virtualenvs/"
+    "python.venvPath": "/home/vsonline/.local/share/virtualenvs/",
+    "python.formatting.provider": "black",
+    "python.testing.pytestArgs": [
+        "tpl8tr"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }

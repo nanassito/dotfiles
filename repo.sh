@@ -2,7 +2,7 @@ set -eux
 
 
 # Extending the default .gitignore
-for PATTERN in '.vscode' 'Pipefile.lock'; 
+for PATTERN in '.vscode' 'Pipfile.lock' '__pycache__/' '.mypy_cache/'; 
 do
     grep $PATTERN .gitignore || echo $PATTERN >> .gitignore
 done
@@ -37,3 +37,22 @@ repos:
     -   id: mypy
 EOF
 pre-commit autoupdate
+
+
+# Setup python's setup.cfg
+ls setup.cfg || cat > setup.cfg << EOF
+[flake8]
+ignore = E203, E266, E501, W503
+max-line-length = 80
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+
+[mypy]
+ignore_missing_imports = True
+
+[mypy-unittests]
+ignore_errors = True
+
+[tool:pytest]
+addopts = --cov=. --cov-report=term-missing --no-cov-on-fail
+EOF
