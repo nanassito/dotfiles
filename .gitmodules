@@ -1,3 +1,9 @@
 [submodule "sharedvault"]
 	path = sharedvault
 	url = https://github.com/nanassito/sharedvault.git
+[submodule "primitize"]
+	path = primitize
+	url = https://github.com/nanassito/primitize
+[submodule "grafana"]
+	path = grafana
+	url = https://github.com/nanassito/grafana

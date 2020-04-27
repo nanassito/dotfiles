@@ -2,14 +2,14 @@ set -eux
 
 
 # Extending the default .gitignore
-for PATTERN in '.vscode' 'Pipfile.lock' '__pycache__/' '.mypy_cache/'; 
+for PATTERN in '.vscode' 'Pipfile.lock' '__pycache__/' '.mypy_cache/' 'dist/'; 
 do
     grep $PATTERN .gitignore || echo $PATTERN >> .gitignore
 done
 
 
 # Make sure we have have pipenv and set up the venv.
-pipenv update --dev || pipenv install --dev --pre pytest black mypy flake8
+pipenv update --dev || pipenv install --dev --pre pytest black mypy flake8 twine wheel setuptools
 
 
 # Setup pre-commit
