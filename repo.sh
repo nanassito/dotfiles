@@ -2,7 +2,7 @@ set -eux
 
 
 # Extending the default .gitignore
-for PATTERN in '.vscode' 'Pipfile.lock' '__pycache__/' '.mypy_cache/' 'dist/' 'build/' '*.egg-info/'; 
+for PATTERN in '.vscode' 'Pipfile.lock' '__pycache__/' '.mypy_cache/' 'dist/' 'build/' '*.egg-info/' '.pytest_cache/'; 
 do
     grep $PATTERN .gitignore || echo $PATTERN >> .gitignore
 done

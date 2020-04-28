@@ -35,3 +35,18 @@ enhanced_prompt() {
 
     PS1="$STATUS\n$ORIG_PS1"
 }
+
+
+fail() {
+    echo $1
+    return 1
+}
+
+
+pypi_publish() {
+    [[ -z $(git status --porcelain) ]] || fail "Uncommited changes"
+    git branch | grep master || fail "Need to be on master"
+    rm -r dist/ build/ *.egg-info/
+    pipenv run python setup.py sdist bdist_wheel
+    pipenv run twine upload dist/*
+}
