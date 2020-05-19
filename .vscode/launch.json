@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Grafana example",
+            "name": "SharedVault",
             "type": "python",
             "request": "launch",
-            "module": "test",
-            "cwd": "${workspaceFolder}/grafana/"
+            "module": "sharedvault.vault",
+            "cwd": "${workspaceFolder}/sharedvault/",
         }
     ]
 }

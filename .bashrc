@@ -37,16 +37,10 @@ enhanced_prompt() {
 }
 
 
-fail() {
-    echo $1
-    return 1
-}
-
-
 pypi_publish() {
-    [[ -z $(git status --porcelain) ]] || fail "Uncommited changes"
-    git branch | grep master || fail "Need to be on master"
-    rm -r dist/ build/ *.egg-info/
+    [[ "0" -eq "$(git status --porcelain | wc -l)" ]] || 'Error: Uncommited changes' || return 1
+    git status -uno | grep "Your branch is up-to-date with 'origin/master'." || 'Error: Need to be on origin/master' || return 1
+    rm -rf dist/ build/ *.egg-info/
     pipenv run python setup.py sdist bdist_wheel
     pipenv run twine upload dist/*
 }
