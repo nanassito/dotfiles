@@ -9,7 +9,10 @@ done
 
 
 # Make sure we have have pipenv and set up the venv.
-pipenv update --dev || pipenv install --dev --pre pytest black mypy flake8 twine wheel setuptools
+if [ -f Pipfile ]
+then pipenv update --dev
+else pipenv --python=python3.8 install --dev --pre pytest black mypy flake8 twine wheel setuptools
+fi
 
 
 # Setup pre-commit
