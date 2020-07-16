@@ -1,16 +1,19 @@
 {
-    "python.pythonPath": "/home/vsonline/.local/share/virtualenvs/sharedvault-00mivEdd/bin/python",
+    "python.pythonPath": "/home/codespace/.local/share/virtualenvs/primitize-pai6EWCY/bin/python",
     "editor.rulers": [
         80,
         120
     ],
     "git.autofetch": true,
-    "python.venvPath": "/home/vsonline/.local/share/virtualenvs/",
+    "python.venvPath": "/home/codespace/.local/share/virtualenvs/",
     "python.formatting.provider": "black",
     "python.testing.pytestArgs": [
         "primitize"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true
 }
