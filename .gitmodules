@@ -4,9 +4,9 @@
 [submodule "primitize"]
 	path = primitize
 	url = https://github.com/nanassito/primitize
-[submodule "grafana"]
-	path = grafana
-	url = https://github.com/nanassito/grafana
 [submodule "urllib_ext"]
 	path = urllib_ext
 	url = https://github.com/nanassito/urllib_ext.git
+[submodule "argparse_logging"]
+	path = argparse_logging
+	url = https://github.com/nanassito/argparse_logging.git
