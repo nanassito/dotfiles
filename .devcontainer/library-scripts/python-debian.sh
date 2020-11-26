@@ -8,7 +8,7 @@
 #
 # Syntax: ./python-debian.sh [Python Version] [Python intall path] [PIPX_HOME] [non-root user] [Update rc files flag] [install tools]
 
-PYTHON_VERSION=${1:-"3.9.0"}
+PYTHON_VERSION=${1:-"3.8.3"}
 PYTHON_INSTALL_PATH=${2:-"/usr/local/python${PYTHON_VERSION}"}
 export PIPX_HOME=${3:-"/usr/local/py-utils"}
 USERNAME=${4:-"automatic"}
@@ -49,6 +49,7 @@ function updaterc() {
 export DEBIAN_FRONTEND=noninteractive
 
 # Install python from source if needed
+echo "PYTHON_VERSION: ${PYTHON_VERSION}" >> /beacon.log
 if [ "${PYTHON_VERSION}" != "none" ]; then
 
     if [ -d "${PYTHON_INSTALL_PATH}" ]; then
