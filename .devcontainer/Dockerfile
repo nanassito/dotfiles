@@ -19,7 +19,8 @@ RUN bash /tmp/scripts/python-debian.sh "3.9.0" "/opt/python/3.9" "/usr/local/py-
 USER codespace
 
 # Initialize all python projects
-RUN cd /home/codespace/workspace/dotfiles && git submodule update && for PIPFILE in $(find . -name Pipfile); do (cd $(dirname $PIPFILE); pipenv update); done
+RUN cd /home/codespace/workspace/dotfiles && git submodule update 
+# && for PIPFILE in $(find . -name Pipfile); do (cd $(dirname $PIPFILE); pipenv update); done
 
 # ** [Optional] Uncomment this section to install additional packages. **
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
