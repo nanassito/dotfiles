@@ -1,12 +1,12 @@
 [submodule "sharedvault"]
 	path = sharedvault
-	url = https://github.com/nanassito/sharedvault.git
+	url = git@github.com:nanassito/sharedvault.git
 [submodule "primitize"]
 	path = primitize
-	url = https://github.com/nanassito/primitize
+	url = git@github.com:nanassito/primitize
 [submodule "urllib_ext"]
 	path = urllib_ext
-	url = https://github.com/nanassito/urllib_ext.git
+	url = git@github.com:nanassito/urllib_ext.git
 [submodule "argparse_logging"]
 	path = argparse_logging
-	url = https://github.com/nanassito/argparse_logging.git
+	url = git@github.com:nanassito/argparse_logging.git
